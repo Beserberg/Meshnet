@@ -1,7 +1,7 @@
 version: "3"
 services:
   meshnet:
-    image:  ghcr.io/beserberg/meshnet:3.16.9
+    image: ghcr.io/beserberg/meshnet:3.16.9
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
