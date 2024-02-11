@@ -1,10 +1,12 @@
 version: "3"
 services:
   meshnet:
-    image: ghcr.io/mattstechinfo/meshnet:v3.17.0
+    image: ghcr.io/beserberg/meshnet:v3.17.0
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
       - NET_RAW
     env_file: .env
-    hostname: meshnet    # Make sure hostname is set! Without it, every restart will add a new peer to your Meshnet.
+    hostname: meshnet-beserberg-PL-MS-Gen8   # Make sure hostname is set! Without it, every restart will add a new peer to your Meshnet.
+    volumes:
+      - ../secrets:/secrets

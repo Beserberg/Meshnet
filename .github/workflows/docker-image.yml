@@ -6,8 +6,7 @@ on:
       - 'fs/**'
       - 'Dockerfile'
     branches:
-      - 'master'
-      - 'dev'
+      - 'main'
     tags:
       - v*
 
@@ -24,7 +23,7 @@ jobs:
       packages: write
 
     steps:
-      - name: Checkout    
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Set up QEMU
