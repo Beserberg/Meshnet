@@ -2,7 +2,7 @@ FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy
 LABEL maintainer="Beserberg - Beserberg"
 
 # Configure the NordVPN client version to install at build
-ARG NORDVPN_CLIENT_VERSION=3.16.9
+ARG NORDVPN_CLIENT_VERSION=3.17.0
 
 # Avoid interactions during build process
 ARG DEBIAN_FRONTEND=noninteractive
