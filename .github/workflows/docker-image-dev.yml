@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Image CI Dev
 
 on:
   push:
@@ -6,9 +6,7 @@ on:
       - 'fs/**'
       - 'Dockerfile'
     branches:
-      - 'main'
-    tags:
-      - v*
+      - 'dev'
 
 env:
   REGISTRY: ghcr.io
@@ -23,7 +21,7 @@ jobs:
       packages: write
 
     steps:
-      - name: Checkout
+      - name: Checkout    
         uses: actions/checkout@v4
 
       - name: Set up QEMU
