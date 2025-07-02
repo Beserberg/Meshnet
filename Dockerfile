@@ -9,7 +9,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies, get the NordVPN Repo, install NordVPN client, cleanup and set executables
 RUN echo "**** Get NordVPN Repo ****" && \
-    curl https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb --output /tmp/nordvpnrepo.deb && \
+    curl https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/n/nordvpn-release/nordvpn-release_1.0.0_all.deb --output /tmp/nordvpnrepo.deb && \
     apt-get install -y /tmp/nordvpnrepo.deb && \
     apt-get update -y && \
     echo "**** Install NordVPN client ****" && \
